@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_form.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<style>
+ body {
+  background: rgb(9,90,121);
+background: radial-gradient(circle, rgba(9,90,121,1) 0%, rgba(74,99,154,1) 31%, rgba(115,104,175,1) 49%, rgba(223,118,230,1) 99%);
+ } 
+ 
+ #title{
+  text-align: center;
+ }
+ #description{
+  text-align: center;
+ }
+</style>
+  </head>
+<body>
+    <h1 id="title">Basic Information Form</h1>
+    <p id="description" style="color: rgb(0, 0, 0);font-size:larger; font-weight: 500; font-family: cursive;">
+        Its an simple basic details collecting form
+    </p>
+    <form id="form">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-6">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="first-name" placeholder="Enter your FirstName eg:John" required>
+                   
+                </div>
+                <div class="col-6">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="last-name" placeholder="Enter your LastName eg:harry" required>
+                </div>
+            </div>
+          <!-- <label for="firstName">First Name</label>
+          <input type="text" class="form-control" id="firstName">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName">
+        </div> -->
+        <div class="form-group">
+            <label for="address">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="eg:abc@gmail.com" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea class="form-control" id="address" rows="2" placeholder ="Enter your address with PlotNo,street name. eg: 24,George street 1,opposite to hypermarket" required ></textarea>
+        </div>
+        <div class="form-group">
+            <label for="typeNumber">Zipcode/Pincode</label>
+            <input type="text" id="pincode" class="form-control" placeholder="eg: 620055" required />
+        </div>
+        <div class="form-check">
+            <label class="form-check-label" style="text-align: start;"><b>Gender:</b></label> <br>
+            <input class="form-check-input" type="radio" name="exampleRadios" id="female" value="Female">
+            <label class="form-check-label" for="exampleRadios2">
+            Female
+            </label><br>
+            <input class="form-check-input" type="radio" name="exampleRadios" id="male" value="Male">
+            <label class="form-check-label" for="exampleRadios2">
+              Male
+            </label>
+          </div>
+
+          </div>
+          <div class="form-check">
+        <label class="form-check-label">Choose your cuisines</label>
+        <br>
+
+         <input class="form-check-input cuisines" type="checkbox" value="India" id="defaultCheck"><label class="form-check-label">Indian</label><br>
+          <input class="form-check-input cuisines" type="checkbox" value="Italian" id="defaultCheck1"><label class="form-check-label">Italian</label><br>
+          <input class="form-check-input cuisines" type="checkbox" value="Chinese" id="defaultCheck2"><label class="form-check-label">Chinese</label>    <br>  
+          <input class="form-check-input cuisines" type="checkbox" value="Thai" id="defaultCheck3"><label class="form-check-label">Thai</label>    <br>
+          <input class="form-check-input cuisines" type="checkbox" value="Mexican" id="defaultCheck4"><label class="form-check-label">Mexican</label><br>
+          <input class="form-check-input cuisines" type="checkbox" value="Cameroonian" id="defaultCheck5"><label class="form-check-label">Cameroonian cuisine</label><br>
+        </div>
+          <!-- <div class="d-flex">
+            <div class="dropdown mr-1">
+              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" data-offset="10,20">
+                Offset
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            </div>
+             -->
+
+    <!-- state using select input -->
+             <!-- <label for="state">State</label>
+             <select id="state" class="custom-select">
+            <option selected>TamilNadu</option>
+            <option value="2">Kerala</option>
+            <option value="3">Andra</option>
+            <option value="4">Assam</option>
+            <option value="5">Arunachal Pradesh</option>
+            <option value="6">Gujarat</option>
+            <option value="7">Manipur</option>
+            <option value="8">Chhattisgarh</option>
+            <option value="9">Karnataka</option>
+           </select>   -->
+
+           <label for="state">State</label>
+                    <input type="text" class="form-control" id="state" placeholder="eg:tamil nadu">
+           <br>
+           <label for="countrys">Country</label>
+             <select id="countrys" class="custom-select">
+            <option id="country" value="India">India</option>
+           </select>  
+            <br><br>
+         
+            <!-- <input type="button" id="submit" value="Submit Form"> -->
+            <input class="btn btn-primary" type="submit" id="submit" value="Submit Form">
+      </form>
+
+<!-- Table to display the order details -->
+      <div class="order_table mt-5">
+        <table id="list_table" class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <!-- <th scope="col">No.</th> -->
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Pincode</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Food</th>
+                <th scope="col">State</th>
+                <th scope="col">Country</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+      </div>
+      <script src="script.js"></script>
+      <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>
+</html>
